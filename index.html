@@ -2,6 +2,7 @@
 <html>
 
 <head>
+  <link rel="stylesheet" href="vivify.min.css">
   <title>TV FLUX</title>
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -28,14 +29,19 @@
     {{#each this}}
   
 
-          <a href="#{{}}">
-            <button class="filterdiv {{location}}" onclick="document.getElementById('playback').src='https://projectFlux.netlify.com/{{viewer}}'">
-            
-       <div class="channel">
-{{name}}
-         </div>
-       </button>
-       </a>
+     
+    <a class="filterdiv {{location}}" href="#{{location}}">
+        <button class="channel-button waves-effect" onclick="document.getElementById('playback').src='https://projectFlux.netlify.com/{{viewer}}'">
+          <img class="channel-logo" src="/ChannelLogos/{{logo}}">
+   <div class="channel">
+    
+     <div class="text-container">
+     <h5>{{name}}</h5>
+     <p>{{status}}</p>
+    </div>
+     </div>
+   </button>
+   </a>
       {{/each}}
       
   </script>
@@ -52,11 +58,18 @@
 
     {{#each this}}
   
-
-          <a class="filterdiv {{location}}" href="#">
-            <button onclick="x='{{channelUrl}}';channelopen()">
-            
-       <div class="channel">
+    <a class="filterdiv {{location}}" href="#{{location}}">
+        <button class="channel-button waves-effect" onclick="document.getElementById('playback').src='https://projectFlux.netlify.com/{{viewer}}'">
+          <img class="channel-logo" src="/ChannelLogos/{{logo}}">
+   <div class="channel">
+    
+     <div class="text-container">
+     <h5>{{name}}</h5>
+     <p>{{status}}</p>
+    </div>
+     </div>
+   </button>
+   </a>
 {{name}}
          </div>
        </button>
@@ -107,7 +120,8 @@
     {{#each this}}
   
 
-    <a class="filterdiv {{location}}" href="#{{id}}">
+   
+    <a class="filterdiv {{location}}" href="#{{location}}">
         <button class="channel-button waves-effect" onclick="document.getElementById('playback').src='https://projectFlux.netlify.com/{{viewer}}'">
           <img class="channel-logo" src="/ChannelLogos/{{logo}}">
    <div class="channel">
@@ -140,7 +154,7 @@
 
     <a id="{{location}}" class="filterdiv "  href="#">
         <button class="channel-button ">
-          <img class="channel-logo plus" src="/ChannelLogos/{{logo}}">
+          <img class="channel-logo plus vivify popIn" src="/ChannelLogos/{{logo}}">
    <div class="channel">
       
      <div class="text-container plus-text">
@@ -158,9 +172,11 @@
 </head>
 
 <body>
-  <nav>
-    <div class="logo-container"><img src="/Branding/tvflux logo.svg"></div>
-  </nav>
+  <div>
+    <div class="logo-container">
+      <div><img src="/Branding/tvflux logo.svg"></div>
+    </div>
+  </div>
   <div class="playback-container">
 
 
@@ -177,7 +193,7 @@
         '\xa0\xa0\xa0\xa0\xa0\xa0\xa0' + "'> </iframe>")
     }
   </script>
-  <div class="sticky-container">
+  <div class="sticky-container" id="up">
     <div class="playing">
       <div id="preview"></div>
     </div>
@@ -189,10 +205,10 @@
 
     </ul>
   </div>
-  <div id="all" class="col  blue">
+  <div id="all" class="col ">
     <div id="items1"></div>
   </div>
-  <div id="sports" class="col  red">
+  <div id="sports" class="col  ">
     <div id="items2"></div>
   </div>
 
@@ -200,7 +216,7 @@
   <div id="news" class="col ">
     <div id="items3"></div>
   </div>
-  <div id="kids" class="col green">
+  <div id="kids" class="col ">
     <div id="items4"></div>
   </div>
   <script>
@@ -211,7 +227,16 @@
       });
     });
   </script>
-
+  <script>
+    $(window).scroll(function () {
+      var scroll = $(window).scrollTop();
+      if (scroll > 300) {
+        $("#up").addClass("scrolled");
+      } else {
+        $("#up").removeClass("scrolled");
+      }
+    });
+  </script>
 </body>
 
 </html>
