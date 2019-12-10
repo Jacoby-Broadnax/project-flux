@@ -106,6 +106,36 @@
       {{/each}}
       
   </script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $.getJSON('https://v2-api.sheety.co/1c0174d5b32dbebdf6f1e14d6ba67a4f/projectFlux/reality', function (data) {
+        var template = Handlebars.compile($('#item-template6').html())
+        $('#items6').html(template(data.reality))
+      })
+    })
+  </script>
+
+  <script id="item-template6" type="text/x-handlebars-template">
+
+    {{#each this}}
+  
+
+          <a class="filterdiv {{location}} vivify fadeInBottom duration-500" href="#{{location}}">
+            <button class="channel-button waves-effect" onclick="document.getElementById('playback').src='https://projectFlux.netlify.com/{{viewer}}'">
+              <img class="channel-logo" src="/ChannelLogos/{{logo}}">
+       <div class="channel">
+        
+         <div class="text-container">
+         <h5>{{name}}</h5>
+         <p>{{status}}</p>
+        </div>
+         </div>
+       </button>
+       </a>
+      {{/each}}
+      
+  </script>
   <script type="text/javascript">
     $(document).ready(function () {
       $.getJSON('https://v2-api.sheety.co/1c0174d5b32dbebdf6f1e14d6ba67a4f/projectFlux/kids', function (data) {
@@ -171,7 +201,7 @@
   </script>
 </head>
 
-<body class="vivify fadeIn delay-500">
+<body class="vivify fadeIn delay-1000">
   <div>
     <div class="logo-container vivify fadeIn delay-2000">
       <div><img src="/Branding/tvflux logo app.svg"></div>
@@ -202,20 +232,10 @@
       <li class="tab col s3 "><a href="#sports">Sports</a></li>
       <li class="tab col s3"><a href="#news">News</a></li>
       <li class="tab col s3"><a href="#kids">Kids</a></li>
-      <li class="tab col s3"><a href="#kids">Reality</a></li>
+      <li class="tab col s3"><a href="#reality">Reality</a></li>
     </ul>
   </div>
   <div id="all" class="col ">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-format="fluid"
-     data-ad-layout-key="-fb+5w+4e-db+86"
-     data-ad-client="ca-pub-2337057488348896"
-     data-ad-slot="7203342992"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
     <div id="items1">
       <div class="loader">
         <h5 style="font-weight: bold; width:100%; text-align:center;">Loading Your Channels</h5>
@@ -240,6 +260,20 @@
     <div id="items4"></div>
   </div>
 
+  <div id="reality" class="col ">
+      <div id="items6"></div>
+    </div>
+
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-format="fluid"
+         data-ad-layout-key="-fb+5w+4e-db+86"
+         data-ad-client="ca-pub-2337057488348896"
+         data-ad-slot="7203342992"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
   <script type="text/javascript"> var infolinks_pid = 3224374; var infolinks_wsid = 0; </script> <script type="text/javascript" src="//resources.infolinks.com/js/infolinks_main.js"></script>
 </body>
 
