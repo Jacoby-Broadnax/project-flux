@@ -28,7 +28,7 @@
     {{#each this}}
   
 
-          <a href="#">
+          <a href="#{{}}">
             <button class="filterdiv {{location}}" onclick="document.getElementById('playback').src='https://projectFlux.netlify.com/{{viewer}}'">
             
        <div class="channel">
@@ -78,11 +78,11 @@
     {{#each this}}
   
 
-          <a class="filterdiv {{location}}" href="#">
+          <a class="filterdiv {{location}}" href="#{{location}}">
             <button class="channel-button waves-effect" onclick="document.getElementById('playback').src='https://projectFlux.netlify.com/{{viewer}}'">
-            
+              <img class="channel-logo" src="/ChannelLogos/{{logo}}">
        <div class="channel">
-         <img class="channel-logo" src="/ChannelLogos/{{logo}}">
+        
          <div class="text-container">
          <h5>{{name}}</h5>
          <p>{{status}}</p>
@@ -107,14 +107,51 @@
     {{#each this}}
   
 
-          <a class="filterdiv {{location}}" href="#">
-            <button onclick="x='{{channelUrl}}';channelopen()">
-            
-       <div class="channel">
-{{name}}
-         </div>
-       </button>
-       </a>
+    <a class="filterdiv {{location}}" href="#{{id}}">
+        <button class="channel-button waves-effect" onclick="document.getElementById('playback').src='https://projectFlux.netlify.com/{{viewer}}'">
+          <img class="channel-logo" src="/ChannelLogos/{{logo}}">
+   <div class="channel">
+    
+     <div class="text-container">
+     <h5>{{name}}</h5>
+     <p>{{status}}</p>
+    </div>
+     </div>
+   </button>
+   </a>
+   {{/each}} 
+  </script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $.getJSON('https://v2-api.sheety.co/1c0174d5b32dbebdf6f1e14d6ba67a4f/projectFlux/all', function (data) {
+        var template = Handlebars.compile($('#item-template5').html())
+        $('#preview').html(template(data.all))
+      })
+    })
+  </script>
+
+  <script id="item-template5" type="text/x-handlebars-template">
+
+    {{#each this}}
+    <style>
+        #{{location}}{display:none}
+          #{{location}}:target {display: block !important;}
+          </style>
+
+    <a id="{{location}}" class="filterdiv "  href="#">
+        <button class="channel-button ">
+          <img class="channel-logo plus" src="/ChannelLogos/{{logo}}">
+   <div class="channel">
+      
+     <div class="text-container plus-text">
+     <h5>{{name}}</h5>
+     <p>{{status}}</p>
+    </div>
+
+    <p class="playing-indicator">Now Playing</p>
+     </div>
+   </button>
+   </a>
       {{/each}}
       
   </script>
@@ -140,34 +177,38 @@
         '\xa0\xa0\xa0\xa0\xa0\xa0\xa0' + "'> </iframe>")
     }
   </script>
-
+  <div class="playing">
+    <div id="preview"></div>
+  </div>
   <ul class="tabs">
     <li class="tab col s3"><a href="#all">All</a></li>
     <li class="tab col s3 "><a href="#sports">Sports</a></li>
     <li class="tab col s3"><a href="#news">News</a></li>
-    <li class="tab col s3" ><a href="#kids"><button onclick="filterSelection('TKids')">Kids</button></a></li>
+    <li class="tab col s3"><a href="#kids"><button onclick="filterSelection('TKids')">Kids</button></a></li>
 
   </ul>
-  <div id="all" class="col s12 blue"><div id="items1"></div></div>
+  <div id="all" class="col s12 blue">
+    <div id="items1"></div>
+  </div>
   <div id="sports" class="col s12 red">
     <div id="items2"></div>
   </div>
 
-   
-    <div id="news" class="col s12">
-      <div id="items3"></div>
-    </div>
-    <div id="kids" class="col s12 green">
-      <div id="items4"></div>
-    </div>
-    <script>
-      $(document).ready(function () {
-        $('ul.tabs').tabs({
-          swipeable: true,
-          responsiveThreshold: 375
-        });
+
+  <div id="news" class="col s12">
+    <div id="items3"></div>
+  </div>
+  <div id="kids" class="col s12 green">
+    <div id="items4"></div>
+  </div>
+  <script>
+    $(document).ready(function () {
+      $('ul.tabs').tabs({
+        swipeable: true,
+        responsiveThreshold: 375
       });
-    </script>
+    });
+  </script>
 
 </body>
 
