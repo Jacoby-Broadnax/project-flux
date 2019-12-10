@@ -16,9 +16,9 @@
 
   <script type="text/javascript">
     $(document).ready(function () {
-      $.getJSON('https://v2-api.sheety.co/1c0174d5b32dbebdf6f1e14d6ba67a4f/projectFlux/sheet1', function (data) {
+      $.getJSON('https://v2-api.sheety.co/1c0174d5b32dbebdf6f1e14d6ba67a4f/projectFlux/all', function (data) {
         var template = Handlebars.compile($('#item-template').html())
-        $('#items').html(template(data.sheet1))
+        $('#items1').html(template(data.all))
       })
     })
   </script>
@@ -29,6 +29,81 @@
   
 
           <a href="#">
+            <button class="filterdiv {{location}}" onclick="document.getElementById('playback').src='https://projectFlux.netlify.com/{{viewer}}'">
+            
+       <div class="channel">
+{{name}}
+         </div>
+       </button>
+       </a>
+      {{/each}}
+      
+  </script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $.getJSON('https://v2-api.sheety.co/1c0174d5b32dbebdf6f1e14d6ba67a4f/projectFlux/sports', function (data) {
+        var template = Handlebars.compile($('#item-template2').html())
+        $('#items2').html(template(data.sports))
+      })
+    })
+  </script>
+
+  <script id="item-template2" type="text/x-handlebars-template">
+
+    {{#each this}}
+  
+
+          <a class="filterdiv {{location}}" href="#">
+            <button onclick="x='{{channelUrl}}';channelopen()">
+            
+       <div class="channel">
+{{name}}
+         </div>
+       </button>
+       </a>
+      {{/each}}
+      
+  </script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $.getJSON('https://v2-api.sheety.co/1c0174d5b32dbebdf6f1e14d6ba67a4f/projectFlux/news', function (data) {
+        var template = Handlebars.compile($('#item-template3').html())
+        $('#items3').html(template(data.news))
+      })
+    })
+  </script>
+
+  <script id="item-template3" type="text/x-handlebars-template">
+
+    {{#each this}}
+  
+
+          <a class="filterdiv {{location}}" href="#">
+            <button onclick="x='{{channelUrl}}';channelopen()">
+            
+       <div class="channel">
+{{name}}
+         </div>
+       </button>
+       </a>
+      {{/each}}
+      
+  </script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $.getJSON('https://v2-api.sheety.co/1c0174d5b32dbebdf6f1e14d6ba67a4f/projectFlux/kids', function (data) {
+        var template = Handlebars.compile($('#item-template4').html())
+        $('#items4').html(template(data.kids))
+      })
+    })
+  </script>
+
+  <script id="item-template4" type="text/x-handlebars-template">
+
+    {{#each this}}
+  
+
+          <a class="filterdiv {{location}}" href="#">
             <button onclick="x='{{channelUrl}}';channelopen()">
             
        <div class="channel">
@@ -48,7 +123,9 @@
   <div class="playback-container">
 
 
-<iframe id="playback"></iframe>
+    <iframe id="playback">
+      <h2>Loading...</h2>
+    </iframe>
   </div>
   <script>
     function channelopen() {
@@ -64,48 +141,21 @@
     <li class="tab col s3"><a href="#all">All</a></li>
     <li class="tab col s3 "><a href="#sports">Sports</a></li>
     <li class="tab col s3"><a href="#news">News</a></li>
-    <li class="tab col s3"><a href="#kids">Kids</a></li>
+    <li class="tab col s3" ><a href="#kids"><button onclick="filterSelection('TKids')">Kids</button></a></li>
 
   </ul>
-  <div id="all" class="col s12 blue">First tab content<img src="/Branding/tvflux logo.svg"></div>
+  <div id="all" class="col s12 blue"><div id="items1"></div></div>
   <div id="sports" class="col s12 red">
-    <div>
+    <div id="items2"></div>
+  </div>
 
-    </div>
+   
     <div id="news" class="col s12 green">
-      <a href="#">
-        <button onclick="document.getElementById('playback').src='https://projectflux.netlify.com/cartoonnetwork.html'">     
-   <div class="channel">
-CN
-     </div>
-   </button>
-
-   <button onclick="x='{{channelUrl}}';channelopen()">     
-    <div class="channel">
- {{name}}
-      </div>
-    </button>
-
-    <button onclick="x='{{channelUrl}}';channelopen()">     
-      <div class="channel">
-   {{name}}
-        </div>
-      </button>
-
-      <button onclick="x='{{channelUrl}}';channelopen()">     
-        <div class="channel">
-     {{name}}
-          </div>
-        </button>
-
-        <button onclick="x='{{channelUrl}}';channelopen()">     
-          <div class="channel">
-       {{name}}
-            </div>
-          </button>
-   </a>
+      <div id="items3"></div>
     </div>
-    <div id="kids" class="col s12 green">Third tab content</div>
+    <div id="kids" class="col s12 green">
+      <div id="items4"></div>
+    </div>
     <script>
       $(document).ready(function () {
         $('ul.tabs').tabs({
@@ -114,6 +164,7 @@ CN
         });
       });
     </script>
+
 </body>
 
 </html>
