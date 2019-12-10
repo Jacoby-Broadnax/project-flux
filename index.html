@@ -225,7 +225,7 @@
         '\xa0\xa0\xa0\xa0\xa0\xa0\xa0' + "'> </iframe>")
     }
   </script>
-
+<p id="notice" class="vivify popOut delay-5000">Double Tap To Enter Fullscreen</p>
   <div class="viewer-spacer"></div>
   <div class="sticky-container" id="up">
     <div class="playing">
@@ -254,7 +254,7 @@
 
   <div id="sports" class="col  ">
     <div id="items2"></div>
-  </div>
+  </p>
 
 
   <div id="news" class="col ">
@@ -278,6 +278,17 @@
             }
         });
     </script>
+
+<script>
+    $(window).scroll(function () {
+        var scroll = $(window).scrollTop();
+        if (scroll > 225) {
+            $("#notice").addClass("open");
+        } else {
+            $("#notice").removeClass("open");
+        }
+    });
+</script>
 
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <ins class="adsbygoogle"
