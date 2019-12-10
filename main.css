@@ -20,7 +20,7 @@ button:focus {background-color: transparent !important;}
     color: #000;
 }
 
-.tabs {margin-top: 0px;;}
+.tabs {margin-top: 0px;border-bottom: solid 1px lightgray;}
 
 .tabs li a button {}
 
@@ -31,6 +31,7 @@ body.darkclass .tabs .indicator {
 .carousel .carousel-item{
     width:100%;
     visibility: visible !important;
+  height: 100vh;
   }
 
   nav {box-shadow: none;background-color: white;}
@@ -49,7 +50,7 @@ body.darkclass .tabs .indicator {
 
 
   /*---------------------------------------Channels-------------------------------------------*/
-  .channel-logo {float: left;width: 51px;height: 59.88px;position:static;}
+  .channel-logo {float: left;width: 51px;height: 59.88px;position:static;margin-left: 10px;}
 
 .text-container {float: left;margin-top: -5px;margin-left: 15px;;}
 
@@ -68,3 +69,7 @@ body.darkclass .tabs .indicator {
 .playing-indicator {position: absolute; right: 20px;;border: solid 1px lightgray;padding: 5px 10px 5px 10px;border-radius: 50px;margin-top: 33px;;}
 
 .plus-text {margin-top: 20px;;}
+
+.col {margin-top: 10px;;}
+
+.sticky-container {position: sticky ;top: 0px;left: 0px; z-index: 150;background-color: white; ;padding-top: 15px;}
