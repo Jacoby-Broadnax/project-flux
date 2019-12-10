@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TV FLUX</title>
+         <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=0" />
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+            <link rel="stylesheet" href="main.css">
+            <script type="module" src="https://unpkg.com/x-frame-bypass"></script>
+    </head>
+    <body>
+        <nav>
+           <div class="logo-container"><img src="/Branding/tvflux logo.svg"></div>
+        </nav>
+        <div class="playback-container">
+            
+
+<iframe id="playback" is="x-frame-bypass" src="https://ustvgo.tv/player.php?stream=CBS">
+</iframe>
+      
+        </div>
+    
+        <ul class="tabs">
+                <li class="tab col s3"><a href="#all">All</a></li>
+                <li class="tab col s3 "><a href="#sports">Sports</a></li>
+                <li class="tab col s3"><a href="#news">News</a></li>
+                <li class="tab col s3"><a href="#kids">Kids</a></li>
+              </ul>
+              <div id="all" class="col s12 blue">First tab content<img src="/Branding/tvflux logo.svg"></div>
+              <div id="sports" class="col s12 red"><div>
+                 <a href="#">
+                     <button onclick="document.getElementById('playback').src='https://ustvgo.tv/player.php?stream=CNN';document.getElementById('playback').contentWindow.location.reload()">
+                <div class="channel">
+CNN
+                  </div>
+                </button>
+                </a>
+                </div>
+              <div id="news" class="col s12 green">Third tab content</div>
+              <div id="kids" class="col s12 green">Third tab content</div>
+              <script>
+              $(document).ready(function(){
+    $('ul.tabs').tabs({
+      swipeable : true,
+      responsiveThreshold : 1000
+    });
+  });
+              </script>
+    </body>
+</html>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="169" height="50" viewBox="0 0 169 50">
+  <defs>
+    <clipPath id="clip-tvflux_logo">
+      <rect width="169" height="50"/>
+    </clipPath>
+  </defs>
+  <g id="tvflux_logo" data-name="tvflux logo" clip-path="url(#clip-tvflux_logo)">
+    <text id="FLUX" transform="translate(77)" font-size="35" font-family="SegoeUI, Segoe UI"><tspan x="0" y="38">FLUX</tspan></text>
+    <text id="TV" transform="translate(13 2)" font-size="32" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="35">TV</tspan></text>
+    <line id="Line_8" data-name="Line 8" y2="26" transform="translate(67.5 13.5)" fill="none" stroke="#000" stroke-width="2"/>
+  </g>
+</svg>
