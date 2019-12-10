@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="382" height="213" viewBox="0 0 382 213">
+  <defs>
+    <clipPath id="clip-banner">
+      <rect width="382" height="213"/>
+    </clipPath>
+  </defs>
+  <g id="banner" clip-path="url(#clip-banner)">
+    <rect width="382" height="213" fill="#fff"/>
+    <text id="Choose_a_Channel_Below" data-name="Choose a Channel Below" transform="translate(17 85)" font-size="31" font-family="SegoeUI, Segoe UI"><tspan x="2.744" y="33">Choose a</tspan><tspan y="33" font-family="SegoeUI-Semilight, Segoe UI" font-weight="300"> </tspan><tspan y="33" font-family="SegoeUI-Bold, Segoe UI" font-weight="700">Channel</tspan><tspan y="33" font-family="SegoeUI-Semilight, Segoe UI" font-weight="300"> </tspan><tspan y="33">Below</tspan></text>
+  </g>
+</svg>
