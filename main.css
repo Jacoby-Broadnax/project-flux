@@ -20,7 +20,7 @@ button:focus {background-color: transparent !important;}
     color: #000;
 }
 
-.logo-container > div {margin: auto; width: 260px;;}
+.logo-container > div {margin: auto; width: 338px;;}
 
 .logo-container {position: fixed; left:0px; top: 0px;z-index: 502;width: 100%;}
 

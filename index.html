@@ -91,7 +91,7 @@
     {{#each this}}
   
 
-          <a class="filterdiv {{location}} vivify fadeIn delay-500" href="#{{location}}">
+          <a class="filterdiv {{location}} vivify fadeInBottom duration-500" href="#{{location}}">
             <button class="channel-button waves-effect" onclick="document.getElementById('playback').src='https://projectFlux.netlify.com/{{viewer}}'">
               <img class="channel-logo" src="/ChannelLogos/{{logo}}">
        <div class="channel">
@@ -159,7 +159,7 @@
       
      <div class="text-container plus-text">
      <h5>{{name}}</h5>
-     <p>{{status}}</p>
+     <p>Now Playing</p>
     </div>
 
     <p class="playing-indicator">Now Playing</p>
@@ -171,10 +171,10 @@
   </script>
 </head>
 
-<body>
+<body class="vivify fadeIn delay-500">
   <div>
-    <div class="logo-container">
-      <div><img src="/Branding/tvflux logo.svg"></div>
+    <div class="logo-container vivify fadeIn delay-2000">
+      <div><img src="/Branding/tvflux logo app.svg"></div>
     </div>
   </div>
   <div class="playback-container">
@@ -206,17 +206,17 @@
     </ul>
   </div>
   <div id="all" class="col ">
-      <div id="items1"> 
-        <div class="loader">
+    <div id="items1">
+      <div class="loader">
         <h5 style="font-weight: bold; width:100%; text-align:center;">Loading Your Channels</h5>
-          <div class="progress black">
-              <div class="indeterminate white"></div>
-          </div>
-    </div>
+        <div class="progress black">
+          <div class="indeterminate white"></div>
+        </div>
+      </div>
 
+    </div>
   </div>
-     </div>
-  
+
 
   <div id="sports" class="col  ">
     <div id="items2"></div>
@@ -229,14 +229,7 @@
   <div id="kids" class="col ">
     <div id="items4"></div>
   </div>
-  <script>
-    $(document).ready(function () {
-      $('ul.tabs').tabs({
-        swipeable: true,
-        responsiveThreshold: 375
-      });
-    });
-  </script>
+
   <script>
     $(window).scroll(function () {
       var scroll = $(window).scrollTop();
