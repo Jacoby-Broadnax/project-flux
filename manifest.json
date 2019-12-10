@@ -1,0 +1,21 @@
+{
+    "short_name": "TV | Flux",
+    "name": "TV | Flux",
+    "icons": [
+        {
+            "src": "Branding/192px%20logo.png",
+            "type": "image/png",
+            "sizes": "192x192"
+    }
+        , {
+            "src": "Branding/512px%20logo.png",
+            "type": "image/png",
+            "sizes": "512x512"
+    }
+  ],
+    "start_url": "index.html",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "scope": "index.html",
+    "theme_color": "#ffffff"
+}
