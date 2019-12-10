@@ -45,16 +45,16 @@
   <nav>
     <div class="logo-container"><img src="/Branding/tvflux logo.svg"></div>
   </nav>
-  <div class="playback-container" id="playback">
+  <div class="playback-container">
 
 
-
+<iframe id="playback"></iframe>
   </div>
   <script>
     function channelopen() {
 
       document.getElementById("playback").innerHTML = "<iframe  is='x-frame-bypass' src='https:" + x +
-        '\xa0\xa0\xa0\xa0\xa0\xa0\xa0' + "'> </iframe>";
+        '\xa0\xa0\xa0\xa0\xa0\xa0\xa0' + "''> </iframe>";
       console.log("<iframe is='x-frame-bypass' src='https:" + x +
         '\xa0\xa0\xa0\xa0\xa0\xa0\xa0' + "'> </iframe>")
     }
@@ -65,6 +65,7 @@
     <li class="tab col s3 "><a href="#sports">Sports</a></li>
     <li class="tab col s3"><a href="#news">News</a></li>
     <li class="tab col s3"><a href="#kids">Kids</a></li>
+
   </ul>
   <div id="all" class="col s12 blue">First tab content<img src="/Branding/tvflux logo.svg"></div>
   <div id="sports" class="col s12 red">
@@ -72,7 +73,37 @@
 
     </div>
     <div id="news" class="col s12 green">
-      <div id="items"></div>
+      <a href="#">
+        <button onclick="document.getElementById('playback').src='https://tvflux.netlify.com/cartoonnetwork.html'">     
+   <div class="channel">
+CN
+     </div>
+   </button>
+
+   <button onclick="x='{{channelUrl}}';channelopen()">     
+    <div class="channel">
+ {{name}}
+      </div>
+    </button>
+
+    <button onclick="x='{{channelUrl}}';channelopen()">     
+      <div class="channel">
+   {{name}}
+        </div>
+      </button>
+
+      <button onclick="x='{{channelUrl}}';channelopen()">     
+        <div class="channel">
+     {{name}}
+          </div>
+        </button>
+
+        <button onclick="x='{{channelUrl}}';channelopen()">     
+          <div class="channel">
+       {{name}}
+            </div>
+          </button>
+   </a>
     </div>
     <div id="kids" class="col s12 green">Third tab content</div>
     <script>
