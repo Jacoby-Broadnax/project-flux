@@ -79,10 +79,14 @@
   
 
           <a class="filterdiv {{location}}" href="#">
-            <button onclick="x='{{channelUrl}}';channelopen()">
+            <button class="channel-button waves-effect" onclick="document.getElementById('playback').src='https://projectFlux.netlify.com/{{viewer}}'">
             
        <div class="channel">
-{{name}}
+         <img class="channel-logo" src="/ChannelLogos/{{logo}}">
+         <div class="text-container">
+         <h5>{{name}}</h5>
+         <p>{{status}}</p>
+        </div>
          </div>
        </button>
        </a>
@@ -150,7 +154,7 @@
   </div>
 
    
-    <div id="news" class="col s12 green">
+    <div id="news" class="col s12">
       <div id="items3"></div>
     </div>
     <div id="kids" class="col s12 green">
