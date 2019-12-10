@@ -207,6 +207,7 @@
       <div><img src="/Branding/tvflux logo app.svg"></div>
     </div>
   </div>
+  
   <div class="playback-container">
 
 
@@ -223,6 +224,8 @@
         '\xa0\xa0\xa0\xa0\xa0\xa0\xa0' + "'> </iframe>")
     }
   </script>
+
+  <div class="viewer-spacer"></div>
   <div class="sticky-container" id="up">
     <div class="playing">
       <div id="preview"></div>
@@ -263,6 +266,17 @@
   <div id="reality" class="col ">
       <div id="items6"></div>
     </div>
+
+    <script>
+        $(window).scroll(function () {
+            var scroll = $(window).scrollTop();
+            if (scroll > 225) {
+                $("#playback").addClass("scrolled");
+            } else {
+                $("#playback").removeClass("scrolled");
+            }
+        });
+    </script>
 
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <ins class="adsbygoogle"
