@@ -20,9 +20,9 @@ button:focus {background-color: transparent !important;}
     color: #000;
 }
 
-.logo-container > div {margin: auto; width: 200px;;}
+.logo-container > div {margin: auto; width: 260px;;}
 
-.logo-container {position: fixed; left:0px; top: 0px;z-index: 502;}
+.logo-container {position: fixed; left:0px; top: 0px;z-index: 502;width: 100%;}
 
 .tabs {margin-top: 0px;border-bottom: solid 1px lightgray;}
 
@@ -68,7 +68,7 @@ body.darkclass .tabs .indicator {
 
 .preview-item{display: none;}
 
-.plus{padding:15px 15px 15px 15px; border: solid 1px lightgray;width: 100px; height: 100px;border-radius: 10px;;margin-top: -2px;;}
+.plus{padding:15px 15px 15px 15px; border: solid 1px lightgray;width: 100px; height: 100px;border-radius: 10px;;margin-top: -2px;;position:relative;z-index: 5;}
 
 .playing-indicator {position: absolute; right: 20px;;border: solid 1px lightgray;padding: 5px 10px 5px 10px;border-radius: 50px;margin-top: 33px;;display: none;;}
 
