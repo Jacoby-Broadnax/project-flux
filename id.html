@@ -11,11 +11,32 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
     <link rel="stylesheet" href="main.css">
     <script type="module" src="https://unpkg.com/x-frame-bypass"></script>
-
+    <script src="path/to/video.js/dist/video.js"></script>
+    <script src="path/to/videojs-chromecast/dist/videojs-chromecast.js"></script>
+    <link rel="stylesheet" href="vivify.min.css">
 </head>
 
-<body>
-    <iframe class="iframed-player" is="x-frame-bypass" src="https://ustvgo.tv/player.php?stream=ID"></iframe>
+<body class="vivify fadeIn delay-2000" onload="player.play();">
+
+ <link href="https://vjs.zencdn.net/7.2.3/video-js.css" rel="stylesheet">
+
+
+<div class="open-video-container">
+    
+ <video id='hls-example'  class="video-js vjs-default-skin video-item" width="330px;" controls autoplay>
+ <source type="application/x-mpegURL" src="https://peer2.ustv.to/ID/myStream/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTIvMTIvMjAxOSA0OjIyOjA5IEFNJmhhc2hfdmFsdWU9QjgzUGJ2OVJmeWxSVTJNRStYL3NHUT09JnZhbGlkbWludXRlcz0zNjAmc3RybV9sZW49MA==">
+ </video>
+
+</div>
+
+ <script src="https://vjs.zencdn.net/ie8/ie8-version/videojs-ie8.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls/5.14.1/videojs-contrib-hls.js"></script>
+ <script src="https://vjs.zencdn.net/7.2.3/video.js"></script>
+
+ <script>
+ var player = videojs('hls-example');
+ player.play();
+ </script>
 </body>
 
 </html>
