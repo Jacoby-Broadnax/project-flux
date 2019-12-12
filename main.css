@@ -65,6 +65,10 @@ body.darkclass .tabs .indicator {
   .video-js .vjs-tech {height:auto !important;}
 
   .playback-loader {position: fixed; top: 0px; z-index: 500;;width: 100%;}
+
+  .stream-list > button {background-color: white; border: solid 1px lightgray; padding: 5px;padding-left: 7px; padding-right: 7px;margin-left: 6px; border-radius: 20px;margin-top: 10px;float: left;;}
+
+  .stream-list {margin-top: -40px;margin-left: 125px ;position: absolute; z-index: 625;top: 300px; left: 60px;;;}
   /*-------------------------------------Tabs--------------------------------------------------*/
 
 

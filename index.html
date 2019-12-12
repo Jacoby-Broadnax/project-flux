@@ -19,6 +19,8 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls/5.14.1/videojs-contrib-hls.js"></script>
       <script src="https://vjs.zencdn.net/7.2.3/video.js"></script>
   <link rel="manifest" href="manifest.json">
+  <script src="/node_modules/video.js/dist/video.js"></script>
+  <script src="/node_modules/video.js/dist/"></script>
 <script data-ad-client="ca-pub-2337057488348896" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <script type="text/javascript">
     $(document).ready(function () {
@@ -99,8 +101,7 @@
           <a class="filterdiv {{location}} vivify fadeInBottom duration-500" href="#{{location}}">
             <button class="channel-button waves-effect" onclick="document.getElementById('playback').src='https://projectFlux.netlify.com/{{viewer}}'">
               <img class="channel-logo" src="/ChannelLogos/{{logo}}">
-       <div class="channel">
-        
+       <div class="channel"> 
          <div class="text-container">
          <h5>{{name}}</h5>
          <p>{{status}}</p>
@@ -187,7 +188,7 @@
           #{{location}}:target {display: block !important;}
           </style>
 
-    <a style="pointer-events: none;" id="{{location}}" class="filterdiv " >
+    <div style="pointer-events: none;" id="{{location}}" class="filterdiv " >
         <button class="channel-button ">
           <img class="channel-logo plus vivify popIn" src="/ChannelLogos/{{logo}}">
    <div class="channel">
@@ -200,7 +201,12 @@
     <p class="playing-indicator">Now Playing | Live</p>
      </div>
    </button>
-   </a>
+   <div class="stream-list">
+    <button class="waves-effect" onclick="document.getElementById('playback').src='https://projectFlux.netlify.com/{{viewer}}'">Stream 1</button>
+    <button class="waves-effect" onclick="document.getElementById('playback').src='https://projectFlux.netlify.com/2{{viewer}}'">Stream 2</button>
+       </div>
+      </div>
+ 
       {{/each}}
       
   </script>
