@@ -266,13 +266,20 @@
 
     <div class="open-video-container" style="margin-top: 500px;;">
         
-     <video id='hls-example'  class="video-js vjs-default-skin video-item" width="330px;" controls autoplay>
-     <source type="application/x-mpegURL" src="https://peer3.ustv.to/ABC/myStream/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTIvMTIvMjAxOSAxOjE1OjIyIFBNJmhhc2hfdmFsdWU9VzZubDBHZ1FsK210eUlYUERnUzNoUT09JnZhbGlkbWludXRlcz0zNjAmc3RybV9sZW49MA==">
+     <video id='my-video'  class="video-js vjs-default-skin video-item" width="330px;" controls autoplay>
+     <source type="application/x-mpegURL">
      </video>
     
     </div>
     
+<script>
 
+if ( Hls.isSupported() ) {
+    var video = document.getElementById('my-video');
+    var hls = new Hls();
+    hls.loadSource('https://peer3.ustv.to/ABC/myStream/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTIvMTIvMjAxOSAxOjE1OjIyIFBNJmhhc2hfdmFsdWU9VzZubDBHZ1FsK210eUlYUERnUzNoUT09JnZhbGlkbWludXRlcz0zNjAmc3RybV9sZW49MA==');
+    hls.attachMedia(video);
+  }</script>
     <div id="all" class="col ">
       <div id="items1">
         <div class="loader">
