@@ -39,7 +39,7 @@
 
      
     <a class="filterdiv {{location}}" href="#{{location}}">
-        <button class="channel-button waves-effect" onclick="navigator.vibrate(1000);document.getElementById('playback').src='https://projectFlux.netlify.com/{{viewer}}'">
+        <button class="channel-button waves-effect" onclick="navigator.vibrate(100);document.getElementById('playback').src='https://projectFlux.netlify.com/{{viewer}}'">
           <img class="channel-logo" src="/ChannelLogos/{{logo}}">
    <div class="channel">
     
@@ -67,7 +67,7 @@
     {{#each this}}
   
     <a class="filterdiv {{location}}" href="#{{location}}">
-        <button class="channel-button waves-effect" onclick="navigator.vibrate(1000);document.getElementById('playback').src='https://projectFlux.netlify.com/{{viewer}}'">
+        <button class="channel-button waves-effect" onclick="navigator.vibrate(100);document.getElementById('playback').src='https://projectFlux.netlify.com/{{viewer}}'">
           <img class="channel-logo" src="/ChannelLogos/{{logo}}">
    <div class="channel">
     
@@ -100,7 +100,7 @@
   
 
           <a class="filterdiv {{location}} vivify fadeInBottom duration-500" href="#{{location}}">
-            <button class="channel-button waves-effect" onclick="navigator.vibrate(1000);document.getElementById('playback').src='https://projectFlux.netlify.com/{{viewer}}'">
+            <button class="channel-button waves-effect" onclick="navigator.vibrate(100);document.getElementById('playback').src='https://projectFlux.netlify.com/{{viewer}}'">
               <img class="channel-logo" src="/ChannelLogos/{{logo}}">
        <div class="channel"> 
          <div class="text-container">
@@ -129,7 +129,7 @@
   
 
           <a class="filterdiv {{location}} vivify fadeInBottom duration-500" href="#{{location}}">
-            <button class="channel-button waves-effect" onclick="navigator.vibrate(1000);document.getElementById('playback').src='https://projectFlux.netlify.com/{{viewer}}'">
+            <button class="channel-button waves-effect" onclick="navigator.vibrate(100);document.getElementById('playback').src='https://projectFlux.netlify.com/{{viewer}}'">
               <img class="channel-logo" src="/ChannelLogos/{{logo}}">
        <div class="channel">
         
@@ -159,7 +159,7 @@
 
    
     <a class="filterdiv {{location}}" href="#{{location}}">
-        <button class="channel-button waves-effect" onclick="navigator.vibrate(1000);document.getElementById('playback').src='https://projectFlux.netlify.com/{{viewer}}'">
+        <button class="channel-button waves-effect" onclick="navigator.vibrate(100);document.getElementById('playback').src='https://projectFlux.netlify.com/{{viewer}}'">
           <img class="channel-logo" src="/ChannelLogos/{{logo}}">
    <div class="channel">
     
@@ -261,16 +261,25 @@
         <li class="tab col s3"><a href="#reality">Reality</a></li>
       </ul>
     </div>
-  
+    <link href="https://vjs.zencdn.net/7.2.3/video-js.css" rel="stylesheet">
 
 
     <div class="open-video-container" style="margin-top: 500px;;">
-      <video width="600" height="400" controls>
-        <source src="https://peer3.ustv.to/CN/myStream/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTIvMTIvMjAxOSA2OjE4OjIyIFBNJmhhc2hfdmFsdWU9QnF1ZGU2d0VuNVo1bkpKRWVCSTRqdz09JnZhbGlkbWludXRlcz0zNjAmc3RybV9sZW49MA==" type="application/x-mpegURL">
-    </video>
+        
+     <video id='hls-example'  class="video-js vjs-default-skin video-item" width="330px;" controls autoplay>
+     <source type="application/x-mpegURL" src="https://peer3.ustv.to/ABC/myStream/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTIvMTIvMjAxOSAxOjE1OjIyIFBNJmhhc2hfdmFsdWU9VzZubDBHZ1FsK210eUlYUERnUzNoUT09JnZhbGlkbWludXRlcz0zNjAmc3RybV9sZW49MA==">
+     </video>
+    
     </div>
-  
-
+    
+     <script src="https://vjs.zencdn.net/ie8/ie8-version/videojs-ie8.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls/5.14.1/videojs-contrib-hls.js"></script>
+     <script src="https://vjs.zencdn.net/7.2.3/video.js"></script>
+    
+     <script>
+     var player = videojs('hls-example');
+     player.play();
+     </script>
     <div id="all" class="col ">
       <div id="items1">
         <div class="loader">
