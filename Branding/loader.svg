@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="360" height="202.438" viewBox="0 0 360 202.438">
+  <defs>
+    <clipPath id="clip-loader">
+      <rect width="360" height="202.438"/>
+    </clipPath>
+  </defs>
+  <g id="loader" clip-path="url(#clip-loader)">
+    <rect width="360" height="202.438" fill="#fff"/>
+    <text id="Loading_Channel..." data-name="Loading Channel..." transform="translate(128 132)" font-size="12" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="13">Loading Channel...</tspan></text>
+  </g>
+</svg>
