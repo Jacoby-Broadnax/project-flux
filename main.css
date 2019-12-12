@@ -54,10 +54,11 @@ body.darkclass .tabs .indicator {
 
   .open-video-container {width: 340px;height:  150px;margin: auto;width: 330px;}
 
-  .open-video-container > div {border-radius: 20px;;}
+  .open-video-container > div {border-radius: 20px;;width: 100%;}
 
-  .open-video-container > div > video {width: 100%;}
+  .open-video-container > video {width: 100%;}
 
+  video {width: 100% !important;}
   /*-------------------------------------Tabs--------------------------------------------------*/
 
 
