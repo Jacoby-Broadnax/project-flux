@@ -265,22 +265,12 @@
 
 
     <div class="open-video-container" style="margin-top: 500px;;">
-        
-     <video src="" id='my-video'  class="video-js vjs-default-skin video-item" width="330px;" controls autoplay>
-
-     </video>
-    
+      <video width="600" height="400" controls>
+        <source src="https://peer2.ustv.to/ABC/myStream/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTIvMTIvMjAxOSA2OjAxOjEzIFBNJmhhc2hfdmFsdWU9cWtENGZqbElFOVdyVURlV1dPU3kzZz09JnZhbGlkbWludXRlcz0zNjAmc3RybV9sZW49MA==" type="application/x-mpegURL">
+    </video>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-<script>
+  
 
-if ( Hls.isSupported() ) {
-    var video = document.getElementById('my-video');
-    var hls = new Hls();
-    hls.loadSource('https://peer2.ustv.to/ABC/myStream/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTIvMTIvMjAxOSA2OjAxOjEzIFBNJmhhc2hfdmFsdWU9cWtENGZqbElFOVdyVURlV1dPU3kzZz09JnZhbGlkbWludXRlcz0zNjAmc3RybV9sZW49MA==');
-    hls.attachMedia(video);
-  }
-  </script>
     <div id="all" class="col ">
       <div id="items1">
         <div class="loader">
