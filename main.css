@@ -60,7 +60,7 @@ body.darkclass .tabs .indicator {
 
   video {width: 100% !important;}
 
-
+  .video-js .vjs-control-bar {background-color: transparent !important;}
 
   .video-js .vjs-tech {height:auto !important;}
 
