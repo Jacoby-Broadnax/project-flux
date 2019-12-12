@@ -91,9 +91,9 @@ body.darkclass .tabs .indicator {
 .col {margin-top: 280px;;}
 
 
-.sticky-container {position: sticky ;top: 0px;left: 0px; z-index: 150;background-color: white; ;}
+.sticky-container {position: sticky ;top: 0px;left: 0px; z-index: 500;background-color: white; ;}
 
-#up {padding-top: 270px;margin-top: -275px;}
+#up {padding-top: 250px;margin-top: -285px;}
 
 #up.scrolled {padding-top: 0px !important;}
 
