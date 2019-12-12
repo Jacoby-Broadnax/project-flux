@@ -14,14 +14,15 @@
   <script type="module" src="https://unpkg.com/x-frame-bypass"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js">
   </script>
-      <link href="https://vjs.zencdn.net/7.2.3/video-js.css" rel="stylesheet">
-      <script src="https://vjs.zencdn.net/ie8/ie8-version/videojs-ie8.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls/5.14.1/videojs-contrib-hls.js"></script>
-      <script src="https://vjs.zencdn.net/7.2.3/video.js"></script>
+  <link href="https://vjs.zencdn.net/7.2.3/video-js.css" rel="stylesheet">
+  <script src="https://vjs.zencdn.net/ie8/ie8-version/videojs-ie8.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls/5.14.1/videojs-contrib-hls.js"></script>
+  <script src="https://vjs.zencdn.net/7.2.3/video.js"></script>
   <link rel="manifest" href="manifest.json">
   <script src="/node_modules/video.js/dist/video.js"></script>
   <script src="/node_modules/video.js/dist/"></script>
-<script data-ad-client="ca-pub-2337057488348896" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script data-ad-client="ca-pub-2337057488348896" async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <script type="text/javascript">
     $(document).ready(function () {
       $.getJSON('https://v2-api.sheety.co/1c0174d5b32dbebdf6f1e14d6ba67a4f/projectFlux/all', function (data) {
@@ -187,8 +188,8 @@
         #{{location}}{display:none}
           #{{location}}:target {display: block !important;}
           </style>
-
-    <div style="pointer-events: none;" id="{{location}}" class="filterdiv " >
+<div id="{{location}}">
+    <div style="pointer-events: none;"  class="filterdiv " >
         <button class="channel-button ">
           <img class="channel-logo plus vivify popIn" src="/ChannelLogos/{{logo}}">
    <div class="channel">
@@ -201,14 +202,14 @@
     <p class="playing-indicator">Now Playing | Live</p>
      </div>
    </button>
-   <div class="stream-list">
-    <button class="waves-effect" onclick="document.getElementById('playback').src='https://projectFlux.netlify.com/{{viewer}}'">Stream 1</button>
-    <button class="waves-effect" onclick="document.getElementById('playback').src='https://projectFlux.netlify.com/2{{viewer}}'">Stream 2</button>
-       </div>
+  
       </div>
- 
+      <div class="stream-list">
+        <button class="waves-effect" onclick="document.getElementById('playback').src='https://projectFlux.netlify.com/{{viewer}}'">Stream 1</button>
+        <button class="waves-effect" onclick="document.getElementById('playback').src='https://projectFlux.netlify.com/2{{viewer}}'">Stream 2</button>
+           </div>
       {{/each}}
-      
+    </div>
   </script>
 </head>
 
@@ -221,108 +222,108 @@
   <div class="playback-container">
 
 
-   
 
 
 
-<div class="playback-container" style="margin-top: 50px;;">
-  <img class="playback-loader" src="Branding/loader.svg">
-  <iframe id="playback" src="https://projectFlux.netlify.com/abc.html"></iframe>
-</div>
-    
-   
-   
-    
+
+    <div class="playback-container" style="margin-top: 50px;;">
+      <img class="playback-loader" src="Branding/loader.svg">
+      <iframe id="playback" src="https://projectFlux.netlify.com/abc.html"></iframe>
+    </div>
+
+
+
+
     <script>
-    var player = videojs('hls-example');
-    player.play();
+      var player = videojs('hls-example');
+      player.play();
     </script>
-  <script>
-    function channelopen() {
+    <script>
+      function channelopen() {
 
-      document.getElementById("playback").innerHTML = "<iframe  is='x-frame-bypass' src='https:" + x +
-        '\xa0\xa0\xa0\xa0\xa0\xa0\xa0' + "''> </iframe>";
-      console.log("<iframe is='x-frame-bypass' src='https:" + x +
-        '\xa0\xa0\xa0\xa0\xa0\xa0\xa0' + "'> </iframe>")
-    }
-  </script>
-  <div class="sticky-container" id="up">
-    <div class="playing">
-      <div id="preview"></div>
-    </div>
-    <ul class="tabs">
-      <li class="tab col s3 "><a href="#all">All</a></li>
-      <li class="tab col s3 "><a href="#sports">Sports</a></li>
-      <li class="tab col s3"><a href="#news">News</a></li>
-      <li class="tab col s3"><a href="#kids">Kids</a></li>
-      <li class="tab col s3"><a href="#reality">Reality</a></li>
-    </ul>
-  </div>
-  <div id="all" class="col ">
-    <div id="items1">
-      <div class="loader">
-        <h5 style="font-weight: bold; width:100%; text-align:center;">Loading Your Channels</h5>
-        <div class="progress black">
-          <div class="indeterminate white"></div>
-        </div>
+        document.getElementById("playback").innerHTML = "<iframe  is='x-frame-bypass' src='https:" + x +
+          '\xa0\xa0\xa0\xa0\xa0\xa0\xa0' + "''> </iframe>";
+        console.log("<iframe is='x-frame-bypass' src='https:" + x +
+          '\xa0\xa0\xa0\xa0\xa0\xa0\xa0' + "'> </iframe>")
+      }
+    </script>
+    <div class="sticky-container" id="up">
+      <div class="playing">
+        <div id="preview"></div>
       </div>
-
+      <ul class="tabs">
+        <li class="tab col s3 "><a href="#all">All</a></li>
+        <li class="tab col s3 "><a href="#sports">Sports</a></li>
+        <li class="tab col s3"><a href="#news">News</a></li>
+        <li class="tab col s3"><a href="#kids">Kids</a></li>
+        <li class="tab col s3"><a href="#reality">Reality</a></li>
+      </ul>
     </div>
-  </div>
+    <div id="all" class="col ">
+      <div id="items1">
+        <div class="loader">
+          <h5 style="font-weight: bold; width:100%; text-align:center;">Loading Your Channels</h5>
+          <div class="progress black">
+            <div class="indeterminate white"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
 
 
-  <div id="sports" class="col  ">
-    <div id="items2"></div>
-  </div>
+    <div id="sports" class="col  ">
+      <div id="items2"></div>
+    </div>
 
 
-  <div id="news" class="col ">
-    <div id="items3"></div>
-  </div>
-  <div id="kids" class="col ">
-    <div id="items4"></div>
-  </div>
+    <div id="news" class="col ">
+      <div id="items3"></div>
+    </div>
+    <div id="kids" class="col ">
+      <div id="items4"></div>
+    </div>
 
-  <div id="reality" class="col ">
+    <div id="reality" class="col ">
       <div id="items6"></div>
     </div>
 
     <script>
-        $(window).scroll(function () {
-            var scroll = $(window).scrollTop();
-            if (scroll > 225) {
-                $("#playback").addClass("scrolled");
-            } else {
-                $("#playback").removeClass("scrolled");
-            }
-        });
-    </script>
-
-<script>
-    $(window).scroll(function () {
+      $(window).scroll(function () {
         var scroll = $(window).scrollTop();
         if (scroll > 225) {
-            $("#notice").addClass("open");
+          $("#playback").addClass("scrolled");
         } else {
-            $("#notice").removeClass("open");
+          $("#playback").removeClass("scrolled");
         }
-    });
-</script>
-
-
-
-
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-format="fluid"
-         data-ad-layout-key="-fb+5w+4e-db+86"
-         data-ad-client="ca-pub-2337057488348896"
-         data-ad-slot="7203342992"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
+      });
     </script>
-  <script type="text/javascript"> var infolinks_pid = 3224374; var infolinks_wsid = 0; </script> <script type="text/javascript" src="//resources.infolinks.com/js/infolinks_main.js"></script>
+
+    <script>
+      $(window).scroll(function () {
+        var scroll = $(window).scrollTop();
+        if (scroll > 225) {
+          $("#notice").addClass("open");
+        } else {
+          $("#notice").removeClass("open");
+        }
+      });
+    </script>
+
+
+
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-fb+5w+4e-db+86"
+      data-ad-client="ca-pub-2337057488348896" data-ad-slot="7203342992"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    <script type="text/javascript">
+      var infolinks_pid = 3224374;
+      var infolinks_wsid = 0;
+    </script>
+    <script type="text/javascript" src="//resources.infolinks.com/js/infolinks_main.js"></script>
 </body>
 
 </html>
