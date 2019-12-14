@@ -25,7 +25,7 @@
 
   if (Hls.isSupported()) {
     var hls = new Hls();
-    hls.loadSource('https://peer3.ustv.to/Bravo/myStream/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTIvMTIvMjAxOSAxOjE5OjA5IFBNJmhhc2hfdmFsdWU9Z3Bhc1FwRzdkV0piMk9WVVYyQnUrZz09JnZhbGlkbWludXRlcz0zNjAmc3RybV9sZW49MA==');
+    hls.loadSource('https://peer3.ustv.to/Bravo/myStream/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTIvMTQvMjAxOSA5OjUyOjQ0IFBNJmhhc2hfdmFsdWU9TlNoVktrSCtTdXdnZmZaa3dXMng0Zz09JnZhbGlkbWludXRlcz0zNjAwJnN0cm1fbGVuPTA=');
     hls.attachMedia(video);
     hls.on(Hls.Events.MANIFEST_PARSED,function() {
       video.play();
@@ -34,7 +34,7 @@
   
   plyr.setup(video);
 })();</script>
-<button onclick="hls.loadSource('https://peer2.ustv.to/CBS/myStream/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTIvMTQvMjAxOSA4OjE2OjQ1IFBNJmhhc2hfdmFsdWU9VXo4TFVSVmJSWFFPaDc0dnRCS3J2dz09JnZhbGlkbWludXRlcz0zNjAwJnN0cm1fbGVuPTA=');">Button Source Test</button>
+
 </body>
 
 </html>
