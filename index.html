@@ -188,7 +188,7 @@
         #{{location}}{display:none}
           #{{location}}:target {display: block !important;}
           </style>
-<div id="{{location}}">
+<div id="{{location}}" class="preview-padding">
     <div style="pointer-events: none;"  class="filterdiv " >
         <button class="channel-button ">
           <img class="channel-logo plus vivify popIn" src="/ChannelLogos/{{logo}}">
@@ -228,8 +228,8 @@
 
 
     <div class="playback-container" style="margin-top: 50px;;">
-      <img class="playback-loader" src="Branding/loader.svg">
-      <iframe id="playback" is="x-frame-bypass" src="https://ustvgo.tv/player.php?stream=ABC"></iframe>
+     
+      <iframe id="playback" src="https://projectflux.netlify.com/abc"></iframe>
      
     </div>
 
@@ -249,6 +249,7 @@
           '\xa0\xa0\xa0\xa0\xa0\xa0\xa0' + "'> </iframe>")
       }
     </script>
+    <div class="side-navigation">
     <div class="sticky-container" id="up">
       <div class="playing">
         <div id="preview"></div>
@@ -271,6 +272,7 @@
      var player = videojs('hls-example');
      player.play();
      </script>
+     
     <div id="all" class="col ">
       <div id="items1">
         <div class="loader">
@@ -297,7 +299,7 @@
     <div id="reality" class="col ">
       <div id="items6"></div>
     </div>
-
+  </div>
     <script>
       $(window).scroll(function () {
         var scroll = $(window).scrollTop();
