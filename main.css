@@ -69,6 +69,10 @@ body.darkclass .tabs .indicator {
   .stream-list > button {background-color: white; border: solid 1px lightgray; padding: 5px;padding-left: 7px; padding-right: 7px;margin-left: 6px; border-radius: 20px;margin-top: 10px;float: left;;}
 
   .stream-list {margin-top: -40px;margin-left: 125px ;position: absolute; z-index: 625;top: 360px; left: 0px;;;}
+
+  #player {border-radius: 7px;background-color: white;;}
+
+  .plyr__video-wrapper {background-color: white !important;}
   /*-------------------------------------Tabs--------------------------------------------------*/
 
 
