@@ -70,7 +70,7 @@ body.darkclass .tabs .indicator {
 
   .stream-list {margin-top: -40px;margin-left: 125px ;position: absolute; z-index: 625;top: 360px; left: 0px;;;}
 
-  #player {border-radius: 7px;background-color: white;;}
+  #player {border-radius: 0px;background-color: white;;}
 
   .plyr__video-wrapper {background-color: white !important;}
 
