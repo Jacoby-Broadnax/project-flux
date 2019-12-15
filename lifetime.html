@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TV FLUX</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=0" />
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <script type="module" src="https://unpkg.com/x-frame-bypass"></script>
+    <link rel="stylesheet" href="https://cdn.plyr.io/1.8.2/plyr.css">
+</head>
+
+<body>
+    
+    <video preload="none" id="player" autoplay controls></video>
+    <script src="https://cdn.plyr.io/1.8.2/plyr.js"></script>
+    <script src="https://cdn.jsdelivr.net/hls.js/latest/hls.js"></script>
+    <script>
+    (function () {
+  var video = document.querySelector('#player');
+
+  if (Hls.isSupported()) {
+    var hls = new Hls();
+    hls.loadSource('https://peer3.ustv.to/Lifetime/myStream/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTIvMTUvMjAxOSAxMDowMDoxMiBQTSZoYXNoX3ZhbHVlPXpja3JkMFIrOXJ5SHd5Y0lNMlhNRFE9PSZ2YWxpZG1pbnV0ZXM9MzYwMCZzdHJtX2xlbj0w');
+    hls.attachMedia(video);
+    hls.on(Hls.Events.MANIFEST_PARSED,function() {
+      video.play();
+    });
+  }
+  
+  plyr.setup(video);
+})();</script>
+
+</body>
+
+</html>
