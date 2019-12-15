@@ -11,11 +11,30 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
     <link rel="stylesheet" href="main.css">
     <script type="module" src="https://unpkg.com/x-frame-bypass"></script>
-
+    <link rel="stylesheet" href="https://cdn.plyr.io/1.8.2/plyr.css">
 </head>
 
 <body>
-    <iframe class="iframed-player" is="x-frame-bypass" src="https://ustvgo.tv/player.php?stream=Oxygen"></iframe>
+    
+    <video preload="none" id="player" autoplay controls></video>
+    <script src="https://cdn.plyr.io/1.8.2/plyr.js"></script>
+    <script src="https://cdn.jsdelivr.net/hls.js/latest/hls.js"></script>
+    <script>
+    (function () {
+  var video = document.querySelector('#player');
+
+  if (Hls.isSupported()) {
+    var hls = new Hls();
+    hls.loadSource('https://peer3.ustv.to/Oxygen/myStream/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTIvMTUvMjAxOSA5OjI0OjA4IFBNJmhhc2hfdmFsdWU9MUdjMXFUejNNbVB6SVVLQmhRSWFLQT09JnZhbGlkbWludXRlcz0zNjAwJnN0cm1fbGVuPTA=');
+    hls.attachMedia(video);
+    hls.on(Hls.Events.MANIFEST_PARSED,function() {
+      video.play();
+    });
+  }
+  
+  plyr.setup(video);
+})();</script>
+
 </body>
 
 </html>
