@@ -50,6 +50,8 @@ body.darkclass .tabs .indicator {
 
   .plyr__progress input[type=range] {display: none !important;}
 
+  .plyr {min-width: 150px  !important;}
+
   .plyr__progress--played, .plyr__volume--display {display: none !important;}
 
   .plyr--video .plyr__progress--buffer {display: none !important;}
@@ -58,7 +60,9 @@ body.darkclass .tabs .indicator {
 
   .plyr__controls input[data-plyr=mute] {display: none !important;}
 
-  .plyr__controls button {margin-right: 70px ;;}
+  .plyr__controls {margin-left: -150px;}
+
+  .plyr--hide-controls .plyr__controls{opacity: 1 !important;}
 
   .plyr__time {display: none !important;}
 
