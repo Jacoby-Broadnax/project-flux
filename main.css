@@ -72,7 +72,7 @@ body.darkclass .tabs .indicator {
 
   .open-video-container > div {width: 100%;}
 
-  .open-video-container > iframe {width: 100%;height: 220px;position: fixed; left: -5px; top: 5px;;;}
+  .open-video-container > iframe {width: 102%;height: 100vh;position: fixed; left: -8px; top: -10px;;border: none;}
 
   video {width: 100% !important;}
 
