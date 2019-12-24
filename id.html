@@ -25,7 +25,7 @@
 
   if (Hls.isSupported()) {
     var hls = new Hls();
-    hls.loadSource('https://peer2.ustv.to/ID/myStream/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTIvMTQvMjAxOSAxMDo0OTo1MCBQTSZoYXNoX3ZhbHVlPU1ET0hTc3o0dnEreHZ3RFBmNXJhTlE9PSZ2YWxpZG1pbnV0ZXM9MzYwMCZzdHJtX2xlbj0w');
+    hls.loadSource('https://peer2.ustv.to/ID/myStream/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTIvMjQvMjAxOSAxOjA0OjQwIEFNJmhhc2hfdmFsdWU9Zm4vd1FRL0k3WWlpWWVlTnYwZ1B4UT09JnZhbGlkbWludXRlcz0zNjAwJnN0cm1fbGVuPTA=');
     hls.attachMedia(video);
     hls.on(Hls.Events.MANIFEST_PARSED,function() {
       video.play();
