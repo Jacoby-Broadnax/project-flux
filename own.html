@@ -2,38 +2,39 @@
 <html>
 
 <head>
-    <title>TV FLUX</title>
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=0" />
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
-    <link rel="stylesheet" href="main.css">
-    <script type="module" src="https://unpkg.com/x-frame-bypass"></script>
-    <link rel="stylesheet" href="https://cdn.plyr.io/1.8.2/plyr.css">
+  <title>TV FLUX</title>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=0" />
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+  <link rel="stylesheet" href="main.css">
+  <script type="module" src="https://unpkg.com/x-frame-bypass"></script>
+  <link rel="stylesheet" href="https://cdn.plyr.io/1.8.2/plyr.css">
 </head>
 
 <body>
-    
-    <video preload="none" id="player" autoplay controls></video>
-    <script src="https://cdn.plyr.io/1.8.2/plyr.js"></script>
-    <script src="https://cdn.jsdelivr.net/hls.js/latest/hls.js"></script>
-    <script>
-    (function () {
-  var video = document.querySelector('#player');
 
-  if (Hls.isSupported()) {
-    var hls = new Hls();
-    hls.loadSource('https://peer1.ustv.to/OWN/myStream/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTIvMjQvMjAxOSAxOjA0OjExIEFNJmhhc2hfdmFsdWU9SHVyaEJDMEhZSExFV3ZNZWNFYlhYdz09JnZhbGlkbWludXRlcz0zNjAwJnN0cm1fbGVuPTA=');
-    hls.attachMedia(video);
-    hls.on(Hls.Events.MANIFEST_PARSED,function() {
-      video.play();
-    });
-  }
-  
-  plyr.setup(video);
-})();</script>
+  <video preload="none" id="player" autoplay controls></video>
+  <script src="https://cdn.plyr.io/1.8.2/plyr.js"></script>
+  <script src="https://cdn.jsdelivr.net/hls.js/latest/hls.js"></script>
+  <script>
+    (function () {
+      var video = document.querySelector('#player');
+
+      if (Hls.isSupported()) {
+        var hls = new Hls();
+        hls.loadSource('cw.m3u8');
+        hls.attachMedia(video);
+        hls.on(Hls.Events.MANIFEST_PARSED, function () {
+          video.play();
+        });
+      }
+
+      plyr.setup(video);
+    })();
+  </script>
 
 </body>
 
