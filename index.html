@@ -47,7 +47,7 @@
 
      
     <a class="filterdiv {{location}}" href="#{{location}}">
-        <button class="channel-button waves-effect" onclick="navigator.vibrate(5);document.getElementById('playback').src='https://projectFlux.netlify.com/{{viewer}}'">
+        <button class="channel-button waves-effect" onclick="document.getElementById('channeltxt').innerHTML = '{{name}}';document.getElementById('channellogo').src='ChannelLogos/{{logo}}';document.getElementById('playback'). src ='https://projectFlux.netlify.com/{{viewer}}';">
           <img class="channel-logo" src="/ChannelLogos/{{logo}}">
    <div class="channel">
     
@@ -180,46 +180,7 @@
    </a>
    {{/each}} 
   </script>
-  <script type="text/javascript">
-    $(document).ready(function () {
-      $.getJSON('https://v2-api.sheety.co/1c0174d5b32dbebdf6f1e14d6ba67a4f/projectFlux/all', function (data) {
-        var template = Handlebars.compile($('#item-template5').html())
-        $('#preview').html(template(data.all))
-      })
-    })
-  </script>
-
-  <script id="item-template5" type="text/x-handlebars-template">
-
-    {{#each this}}
-    <style>
-        #{{location}}{display:none}
-          #{{location}}:target {display: block !important;}
-          </style>
-<div id="{{location}}" class="preview-padding">
-    <div style="pointer-events: none;"  class="filterdiv " >
-        <button class="channel-button ">
-          <img class="channel-logo plus vivify popIn" src="/ChannelLogos/{{logo}}">
-   <div class="channel">
-      
-     <div class="text-container plus-text">
-     <h5>{{name}}</h5>
-     <p>Now Playing | Live</p>
-    </div>
-
-    <p class="playing-indicator">Now Playing | Live</p>
-     </div>
-   </button>
-  
-      </div>
-      <div class="stream-list">
-        <button class="waves-effect" onclick="document.getElementById('playback').src='https://projectFlux.netlify.com/{{viewer}}'">Stream 1</button>
-        <button class="waves-effect" onclick="document.getElementById('playback').src='https://projectFlux.netlify.com/2{{viewer}}'">Stream 2</button>
-           </div>
-          </div>
-      {{/each}}
-   
-  </script>
+ 
 </head>
 
 <body class="vivify fadeIn delay-1000">
@@ -259,10 +220,28 @@
       </script>
       <div class="side-navigation">
         <div class="sticky-container" id="up">
-          <div class="playing">
-            <div id="preview"></div>
+         
+          <div id="playbackindicator" class="playing" >
+            <div id="{{location}}">
+              <div style="pointer-events: none;"  class="filterdiv tv-view" >
+                  <button class="channel-button " style="border: none;box-shadow:none;margin-top:0px;;">
+                    <img id="channellogo" class="channel-logo plus" src="/ChannelLogos/abc.svg">
+             <div class="channel">
+                
+               <div class="text-container plus-text waves-effect">
+               <h5 id="channeltxt">ABC</h5>
+               <p>Now Playing</p>
+              </div>
+          
+        
+               </div>
+              
+             </button>
+            
+                </div>
+            </div>    
           </div>
-          <ul class="tabs">
+          <ul class="tabs" >
             <li class="tab col s3 "><a href="#all">All</a></li>
             <li class="tab col s3 "><a href="#sports">Sports</a></li>
             <li class="tab col s3"><a href="#news">News</a></li>

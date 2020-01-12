@@ -20,13 +20,15 @@ button:focus {background-color: transparent !important;}
     color: #000;
 }
 
+#items1 {margin-top:260px;}
 
+.logo-container > div {border-bottom: 1px lightgray;}
 
-.logo-container > div {margin: auto; width: 338px;;}
+.logo-container {position: fixed; left:350px; top:35px;z-index: 502;width: 110%;}
 
-.logo-container {position: fixed; left:0px; top: 0px;z-index: 502;width: 100%;}
+.logo-container > div > img {border-bottom: solid 1px lightgray;;}
 
-.tabs {margin-top: 0px;border-bottom: solid 1px lightgray;}
+.tabs {margin-top: 211px;border-bottom: solid 1px lightgray;position: fixed;z-index: 150;background-color: white;;padding-top: 5px;width: 475px;}
 
 .tabs li a button {}
 
@@ -80,6 +82,8 @@ body.darkclass .tabs .indicator {
 
   .video-js .vjs-tech {height:auto !important;}
 
+  
+
   .playback-loader {position: fixed; top: 0px; z-index: 500;;width: 100%;}
 
   .stream-list > button {background-color: white; border: solid 1px lightgray; padding: 5px;padding-left: 7px; padding-right: 7px;margin-left: 6px; border-radius: 20px;margin-top: 10px;float: left;;}
@@ -107,7 +111,7 @@ body.darkclass .tabs .indicator {
 
 .text-container > p {margin-top: -8px;margin-left: 2px;;text-align: left;font-size: 12px;;}
 
-.channel-button {width: 100%;border: none; background-color: transparent;}
+.channel-button {width: 100%;border: none; background-color: transparent;border-radius: 10px;}
 
 .channel {float: left;}
 
@@ -120,10 +124,10 @@ body.darkclass .tabs .indicator {
 .plus-text {margin-top: 20px;;}
 
 
-.col {margin-top:5px;}
 
 
-.sticky-container {background-color: white; position: sticky; top: 0px;z-index: 500;}
+.playing {padding-top: 100px;background-color: white;position: fixed;top: 0px;z-index: 150;width: 100%;}
+.sticky-container {background-color: white; z-index: 500;}
 
 
 
