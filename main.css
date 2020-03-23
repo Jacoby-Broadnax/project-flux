@@ -82,7 +82,7 @@ body.darkclass .tabs .indicator {
 
   .open-video-container > div {width: 805px;}
 
-  .open-video-container > iframe {width: 805px;height: 567px;position: fixed; left: -8px; top: -10px;;border: none;}
+  .open-video-container > iframe {width: 102%;height:105vh;position: fixed; left: -8px; top: -10px;;border: none;}
 
   video {width: 100% !important;}
 
@@ -120,6 +120,7 @@ body.darkclass .tabs .indicator {
 
 .vert-cover {width: 30px; height: 100vh; position: fixed; background-color:
     white;margin-left: 765px;}
+.bc-cover {position: fixed;width: 800px; height: 50px; background-color: white;z-index: 51;margin-top: 650px;margin-left: -5px;}
   /*---------------------------------------Channels-------------------------------------------*/
   .channel-logo {float: left;height:80px;position:static;margin-left: 10px;border: solid 1px lightgray;width: 115px;object-fit: scale-down;padding: 10px;padding-left: 20px;padding-right: 20px;}
 
