@@ -47,7 +47,7 @@
 
      
     <a class="filterdiv {{location}}" href="#{{location}}">
-        <button class="channel-button waves-effect" onclick="document.getElementById('channeltxt').innerHTML = '{{name}}';document.getElementById('channellogo').src='ChannelLogos/{{logo}}';document.getElementById('playback'). src ='https://projectFlux.netlify.com/{{viewer}}';">
+        <button class="channel-button waves-effect" onclick="document.getElementById('tvGuide').src = '{{channelUrl}}';document.getElementById('channeltxt').innerHTML = '{{name}}';document.getElementById('channellogo').src='ChannelLogos/{{logo}}';document.getElementById('playback'). src ='https://projectFlux.netlify.com/{{viewer}}';">
           <img class="channel-logo" src="/ChannelLogos/{{logo}}">
    <div class="channel">
     
@@ -57,6 +57,8 @@
     </div>
      </div>
    </button>
+
+
    </a>
       {{/each}}
       
@@ -197,9 +199,16 @@
     <div class="centered-container">
 
       <div class="playback-container" style="margin-top: 50px;;">
-
+        <div class="guide-cover"></div>
+        <div class="vert-cover"></div>
         <iframe id="playback" src="https://projectflux.netlify.com/abc" allowfullscreen></iframe>
 
+        <div class="tv-guide-container">
+          <iframe id="tvGuide" class="tv-guide" src="https://streamingtvguides.com/Channel/AETV">
+
+          </iframe>
+        </div>
+    
       </div>
 
 
