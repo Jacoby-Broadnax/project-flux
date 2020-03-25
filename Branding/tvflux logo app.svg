@@ -5,8 +5,7 @@
     </clipPath>
   </defs>
   <g id="tvflux_logo_app" data-name="tvflux logo app" clip-path="url(#clip-tvflux_logo_app)">
-    <text id="OMEGA" transform="translate(146 6)" font-size="27" font-family="SegoeUI, Segoe UI"><tspan x="0" y="29">OMEGA</tspan></text>
-    <text id="TV" transform="translate(96 6)" font-size="27" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="29">TV</tspan></text>
-    <line id="Line_8" data-name="Line 8" y2="19" transform="translate(139.5 16.5)" fill="none" stroke="#000" stroke-width="1.5"/>
+    <text id="TV" transform="translate(99 6)" font-size="27" font-family="SegoeUI, Segoe UI"><tspan x="0" y="29">TV</tspan></text>
+    <text id="OME.GA" transform="translate(137 6)" font-size="27" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="29">OME.GA</tspan></text>
   </g>
 </svg>
