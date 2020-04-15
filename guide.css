@@ -40,3 +40,7 @@ header {
 .rc-anchor-normal-footer {
   display: none !important;
 }
+
+.article-content {
+  padding: 0px !important;
+}
