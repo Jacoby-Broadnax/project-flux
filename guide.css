@@ -1,0 +1,42 @@
+.iframe-container {
+  display: none !important;
+}
+.ustvg-nordvpn {
+  display: none !important;
+}
+.entry-header {
+  display: none !important;
+}
+body {
+  background-color: white !important;
+}
+
+#content {
+  background-color: white !important;
+}
+
+#main {
+  background-color: white !important;
+}
+
+.timetable-header {
+  background-color: black !important;
+}
+.timetable-time {
+  color: black !important;
+}
+
+.timetable-name {
+  color: black !important;
+}
+
+.inner-wrap {
+  width: 100% !important;
+}
+
+header {
+  display: none !important;
+}
+.rc-anchor-normal-footer {
+  display: none !important;
+}
