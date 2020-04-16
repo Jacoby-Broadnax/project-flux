@@ -44,3 +44,7 @@ header {
 .article-content {
   padding: 0px !important;
 }
+
+#secondary {display: none !important;}
+.default-wp-page {display: none !important;}
+.footer-socket-wrapper {display: none !important;}
